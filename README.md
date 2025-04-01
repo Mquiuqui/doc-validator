@@ -4,7 +4,7 @@
 Validator for Brazilian documents like **CPF**, **CNPJ**, **RG**, **CNH**, and **date-related validations** — built by [@mquiuqui](https://github.com/mquiuqui).
 
 ![npm](https://img.shields.io/npm/v/@mquiuqui/doc-validator?style=flat-square)
-![tests](https://img.shields.io/github/actions/workflow/status/mquiuqui/doc-validator/validate-and-publish.yml?branch=main&style=flat-square)
+![tests](https://img.shields.io/github/actions/workflow/status/mquiuqui/doc-validator/publish.yml?branch=main&style=flat-square)
 
 ## ✨ Features
 
