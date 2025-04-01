@@ -2,20 +2,18 @@ export function isValidCNH(cnh: string): boolean {
     cnh = cnh.replace(/\D/g, '');
     if (cnh.length !== 11 || /^(\d)\1+$/.test(cnh)) return false;
 
-    let dsc = 0;
-    let v = 0;
+    let sum = 0;
     for (let i = 0, j = 9; i < 9; ++i, --j) {
-        v += +cnh.charAt(i) * j;
+        sum += parseInt(cnh.charAt(i)) * j;
     }
-    let d1 = v % 11;
+    let d1 = sum % 11;
     d1 = d1 >= 10 ? 0 : d1;
-    dsc = d1 >= 10 ? 2 : 0;
-    v = 0;
+
+    sum = 0;
     for (let i = 0, j = 1; i < 9; ++i, ++j) {
-        v += +cnh.charAt(i) * j;
+        sum += parseInt(cnh.charAt(i)) * j;
     }
-    let d2 = (v % 11) - dsc;
-    d2 = d2 < 0 ? d2 + 11 : d2;
+    let d2 = sum % 11;
     d2 = d2 >= 10 ? 0 : d2;
 
     return `${d1}${d2}` === cnh.slice(-2);

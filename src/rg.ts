@@ -1,13 +1,9 @@
 export function isValidRG(rg: string): boolean {
     const cleaned = rg.replace(/[^\dXx]/g, '').toUpperCase();
-    if (!/^[0-9]{8}[0-9X]$/.test(cleaned)) return false;
 
-    const numbers = cleaned.split('').map((c, i) => (c === 'X' ? 10 : +c));
-    let sum = 0;
-    for (let i = 0; i < 9; i++) {
-        sum += numbers[i] * (9 - i);
-    }
-    return sum % 11 === 0;
+    if (/^0+$/.test(cleaned.replace(/X/i, '0'))) return false;
+
+    return /^[0-9]{8}[0-9X]$/.test(cleaned);
 }
 
 export function formatRG(rg: string): string {

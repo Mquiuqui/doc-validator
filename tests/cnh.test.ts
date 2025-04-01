@@ -2,7 +2,7 @@ import { isValidCNH } from '../src/cnh';
 
 describe('Validação de CNH', () => {
     it('deve validar CNH válida', () => {
-        expect(isValidCNH('12345678909')).toBe(true);
+        expect(isValidCNH('02650306461')).toBe(true);
     });
 
     it('deve invalidar CNH inválida', () => {
