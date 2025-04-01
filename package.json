@@ -1,12 +1,13 @@
 {
     "name": "@mquiuqui/doc-validator",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Validador de documentos brasileiros (CPF, CNPJ, etc)",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc",
-        "test": "jest"
+        "test": "jest",
+        "release:patch": "npm version patch && git push && git push --tags"
     },
     "keywords": [
         "cpf",
