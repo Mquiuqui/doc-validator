@@ -1,6 +1,6 @@
 {
     "name": "@mquiuqui/doc-validator",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Validador de documentos brasileiros (CPF, CNPJ, etc)",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
